@@ -1,0 +1,20 @@
+.expense-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  background-color: pink;
+}
+.expense-form div:first-child {
+  width: auto;
+}
+input {
+  border: 1px solid rgb(206, 197, 197);
+  border-radius: 10px;
+  height: 25px;
+}
+.form-item-wrapper {
+  display: flex;
+  flex-direction: column;
+}

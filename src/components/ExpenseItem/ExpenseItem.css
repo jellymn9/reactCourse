@@ -1,0 +1,16 @@
+.expense-item {
+  display: flex;
+  justify-items: center;
+  border: 1px solid blue;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.expense-item__description {
+  color: rgb(80, 116, 68);
+}
+
+.expense-item__price {
+  color: rgb(236, 65, 236);
+}
