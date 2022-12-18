@@ -3,15 +3,7 @@ import { useState } from "react";
 
 function NewExpense(props) {
   const [showForm, setShowForm] = useState(false);
-
-  // const test = () => {
-  //   console.log(props);
-  //   props.onAddExpnese({
-  //     title: "title",
-  //     startDate: "startDate",
-  //     amount: "amount",
-  //   });
-  // };
+  console.log("NewExpense updated!");
 
   return (
     <div>
@@ -20,8 +12,30 @@ function NewExpense(props) {
           Add new expense
         </button>
       )}
-      {showForm && <ExpenseForm addNewExpense={props.onAddExpense} />}
-      {/* <button onClick={test}></button> */}
+      {/* {showForm && ( */}
+      <ExpenseForm
+        addNewExpense={
+          props.onAddExpense
+          // () =>
+          //   props.onAddExpense({
+          //     title: "test",
+          //     startDate: new Date(),
+          //     amount: 4,
+          //   })
+        }
+      />
+      {/* )} */}
+      <button
+        onClick={() =>
+          props.onAddExpense({
+            title: "test",
+            startDate: new Date(),
+            amount: 4,
+          })
+        }
+      >
+        Test btn
+      </button>
     </div>
   );
 }

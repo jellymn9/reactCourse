@@ -34,9 +34,10 @@ function App() {
   const addExpenseHandler = (expense) => {
     console.log("In App.js");
     console.log(expense);
-    setExpenses((prevExpenses) => [expense, ...prevExpenses]);
+    // setExpenses((prevExpenses) => [expense, ...prevExpenses]);
+    setExpenses([expense, ...expenses]);
   };
-
+  console.log("App updated!");
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />

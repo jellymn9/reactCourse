@@ -34,6 +34,7 @@ function Expenses(props) {
     console.log("1");
     setFilteredYear(selectedYear);
   };
+  console.log("Expenses updated!");
   return (
     <Card>
       <ExpensesFilter

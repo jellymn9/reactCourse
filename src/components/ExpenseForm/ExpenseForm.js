@@ -12,7 +12,7 @@ function ExpenseForm(props) {
 
   return (
     <Card>
-      <form className="expense-form">
+      <div className="expense-form">
         <div className="form-item-wrapper">
           <label>Select date: </label>
           <DatePicker
@@ -24,7 +24,7 @@ function ExpenseForm(props) {
           />
         </div>
         <div>
-          <label for="ftitle">Title: </label>
+          <label htmlFor="ftitle">Title: </label>
           <br />
           <input
             type="text"
@@ -35,7 +35,7 @@ function ExpenseForm(props) {
           />
         </div>
         <div>
-          <label for="famount">Amount: </label>
+          <label htmlFor="famount">Amount: </label>
           <br />
           <input
             type="number"
@@ -58,7 +58,18 @@ function ExpenseForm(props) {
         >
           Submit
         </button>
-      </form>
+      </div>
+      <button
+        onClick={() => {
+          props.addNewExpense({
+            title: title,
+            startDate: startDate,
+            amount: amount,
+          });
+        }}
+      >
+        Submit test btn
+      </button>
     </Card>
   );
 }

@@ -2,6 +2,7 @@ import Card from "../GlobalComponents/Card";
 import "./ExpensesFilter.css";
 
 function ExpensesFilter(props) {
+  console.log("ExpenseFilter updated");
   return (
     <Card className="expenses-filter">
       <span>Filter by year</span>
