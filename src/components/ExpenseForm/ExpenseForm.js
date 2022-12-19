@@ -18,7 +18,7 @@ function ExpenseForm(props) {
           <DatePicker
             selected={startDate}
             onChange={(date) => {
-              console.log(date, typeof date);
+              console.log("DATE: ",date, typeof date);
               setStartDate(date);
             }}
           />
@@ -51,7 +51,7 @@ function ExpenseForm(props) {
           onClick={() => {
             props.addNewExpense({
               title: title,
-              startDate: startDate,
+              date: startDate,
               amount: amount,
             });
           }}
@@ -59,7 +59,7 @@ function ExpenseForm(props) {
           Submit
         </button>
       </div>
-      <button
+      {/* <button
         onClick={() => {
           props.addNewExpense({
             title: title,
@@ -69,7 +69,7 @@ function ExpenseForm(props) {
         }}
       >
         Submit test btn
-      </button>
+      </button> */}
     </Card>
   );
 }

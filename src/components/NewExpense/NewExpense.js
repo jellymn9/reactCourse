@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function NewExpense(props) {
   const [showForm, setShowForm] = useState(false);
-  console.log("NewExpense updated!");
 
   return (
     <div>
@@ -25,17 +24,6 @@ function NewExpense(props) {
         }
       />
       {/* )} */}
-      <button
-        onClick={() =>
-          props.onAddExpense({
-            title: "test",
-            startDate: new Date(),
-            amount: 4,
-          })
-        }
-      >
-        Test btn
-      </button>
     </div>
   );
 }

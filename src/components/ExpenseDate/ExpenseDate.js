@@ -1,6 +1,6 @@
 import "./ExpenseDate.css";
 function ExpenseDate(props) {
-  const month = props.date.getMonth(); //.toISOString();
+  const month = new Date(props.date).getMonth(); //.toISOString();
   const day = props.date.getDate(); //.toISOString();
   const year = props.date.getFullYear(); //.toISOString();
   return (

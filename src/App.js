@@ -1,11 +1,9 @@
-// import ExpenseItem from "./components/ExpenseItem/ExpenseItem";
 import "./App.css";
 import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
-  // const [filteredYear, setFilteredYear] = useState("2022");
   const DUMMY_EXPENSES = [
     {
       amount: 123,
@@ -37,7 +35,7 @@ function App() {
     // setExpenses((prevExpenses) => [expense, ...prevExpenses]);
     setExpenses([expense, ...expenses]);
   };
-  console.log("App updated!");
+
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
